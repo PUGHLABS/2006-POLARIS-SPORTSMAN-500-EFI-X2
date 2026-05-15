@@ -1,0 +1,9 @@
+# Large files — keep locally, not in repo
+ATV PICS/
+MAINT ALT1.pdf
+MAINT ALT2.pdf
+
+# Editor / OS
+.vscode/
+Thumbs.db
+.DS_Store

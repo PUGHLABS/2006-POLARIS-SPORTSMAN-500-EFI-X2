@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg7"
+   sodipodi:docname="favicon Silverado.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs7" />
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="40.106213"
+     inkscape:cx="10.858667"
+     inkscape:cy="13.551516"
+     inkscape:window-width="3840"
+     inkscape:window-height="2054"
+     inkscape:window-x="3061"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7" />
+  <!-- dark background -->
+  <rect
+     width="32"
+     height="32"
+     rx="5"
+     fill="#111214"
+     id="rect1" />
+  <!-- pizza-cutter tires: inset so they sit under the fenders -->
+  <line
+     x1="5.2297006"
+     y1="8.5783386"
+     x2="5.2297006"
+     y2="29.468882"
+     stroke="#f5a623"
+     stroke-width="1.82825"
+     stroke-linecap="round"
+     id="line1"
+     style="stroke:#1f8d06;stroke-opacity:1" />
+  <line
+     x1="27.119373"
+     y1="8.3160725"
+     x2="27.119373"
+     y2="29.506742"
+     stroke="#f5a623"
+     stroke-width="1.84133"
+     stroke-linecap="round"
+     id="line2"
+     style="fill:#217844;stroke:#29a608;stroke-opacity:1" />
+  <line
+     x1="20.241058"
+     y1="9.0938749"
+     x2="20.241058"
+     y2="16.749699"
+     stroke="#f5a623"
+     stroke-width="1.10676"
+     stroke-linecap="round"
+     id="line2-9"
+     style="fill:#217844;stroke:#29a608;stroke-opacity:1" />
+  <!-- dark mask hides tires behind body/fender — only stub below fender line shows (lifted) -->
+  <rect
+     x="5"
+     y="6.5"
+     width="22"
+     height="16"
+     fill="#111214"
+     id="rect2" />
+  <!-- truck body outline -->
+  <rect
+     x="5.5"
+     y="7"
+     width="21"
+     height="15"
+     rx="1.5"
+     fill="none"
+     stroke="#f5a623"
+     stroke-width="1.5"
+     id="rect3"
+     style="stroke:#609207;stroke-opacity:1" />
+  <!-- windshield: angled A-pillars, wider at bottom (boxy 80s rake) -->
+  <polygon
+     points="8.5,8 23.5,8 25,12.5 7,12.5"
+     fill="none"
+     stroke="#f5a623"
+     stroke-width="0.9"
+     opacity="0.55"
+     id="polygon3"
+     style="stroke:#1a7505;stroke-opacity:1" />
+  <!-- left headlight -->
+  <rect
+     x="6.5"
+     y="13.5"
+     width="4.5"
+     height="3.5"
+     rx="0.5"
+     fill="none"
+     stroke="#f5a623"
+     stroke-width="1.1"
+     id="rect4"
+     style="stroke:#438d06;stroke-opacity:1" />
+  <!-- right headlight -->
+  <rect
+     x="21"
+     y="13.5"
+     width="4.5"
+     height="3.5"
+     rx="0.5"
+     fill="none"
+     stroke="#f5a623"
+     stroke-width="1.1"
+     id="rect5"
+     style="stroke:#2a8e06;stroke-opacity:1" />
+  <!-- center grille -->
+  <rect
+     x="12"
+     y="13.5"
+     width="8"
+     height="7.5"
+     rx="0.5"
+     fill="none"
+     stroke="#f5a623"
+     stroke-width="1.1"
+     id="rect6"
+     style="stroke:#1a8606;stroke-opacity:1" />
+  <line
+     x1="20.75176"
+     y1="2.6105533"
+     x2="28.75176"
+     y2="2.6105533"
+     stroke="#f5a623"
+     stroke-width="0.8"
+     id="line6" />
+  <line
+     x1="3.9135072"
+     y1="2.8816869"
+     x2="11.913507"
+     y2="2.8816869"
+     stroke="#f5a623"
+     stroke-width="0.8"
+     id="line6-8" />
+  <line
+     x1="37.911507"
+     y1="10.804236"
+     x2="45.911507"
+     y2="10.804236"
+     stroke="#f5a623"
+     stroke-width="0.8"
+     id="line6-8-5" />
+  <line
+     x1="12"
+     y1="18.5"
+     x2="20"
+     y2="18.5"
+     stroke="#f5a623"
+     stroke-width="0.8"
+     id="line7" />
+</svg>

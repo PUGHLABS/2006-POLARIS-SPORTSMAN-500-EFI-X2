@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2007 POLARIS SPORTSMAN X2/500 EFI · Spokane, WA</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="vehicle.css">
+  <script>
+    // Apply theme before paint to avoid flash.
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
+    <span class="icon-moon">🌙</span>
+    <span class="icon-sun">☀</span>
+  </button>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge" id="hero-badge">AWD · Polaris · Sportsman X2/500</div>
+      <h1 id="hero-title">2007 Polaris Sportsman X2/500</h1>
+      <p class="hero-sub" id="hero-sub">…</p>
+      <div class="hero-stats" id="hero-stats"></div>
+    </div>
+    <div class="hero-rule"></div>
+  </header>
+
+  <nav class="section-nav">
+    <a href="#highlights">Upgrades</a>
+    <a href="#status">Status</a>
+    <a href="#upcoming">Upcoming</a>
+    <a href="#history">History</a>
+    <a href="#parts">Parts</a>
+    <a href="#notes">Notes</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#photos">Photos</a>
+    <a href="#vehicle">Vehicle</a>
+    <a href="#search">Search</a>
+  </nav>
+
+  <main>
+
+    <section id="about" class="section">
+      <h2 class="section-title">About This ATV</h2>
+      <p class="section-desc" id="about-desc">…</p>
+      <div id="fsm-banner"></div>
+    </section>
+
+    <section id="highlights" class="section">
+      <h2 class="section-title">Recent Parts &amp; Additions
+        <button class="btn btn-sm" data-action="add-highlight">+ Add</button>
+      </h2>
+      <div class="upgrade-grid" id="highlights-grid"></div>
+    </section>
+
+    <section id="status" class="section">
+      <h2 class="section-title">Current Status
+        <button class="btn btn-sm" data-action="edit-status">Edit hours / mi</button>
+      </h2>
+      <div class="status-strip" id="status-strip"></div>
+    </section>
+
+    <section id="upcoming" class="section">
+      <h2 class="section-title">Recommended Upcoming Maintenance</h2>
+      <p class="section-desc">Computed against current hours, miles, and last-done dates. Whichever threshold trips first wins.</p>
+      <div class="upcoming-grid" id="upcoming-grid"></div>
+    </section>
+
+    <section id="history" class="section">
+      <h2 class="section-title">Service History
+        <button class="btn btn-sm" data-action="add-service">+ Add entry</button>
+      </h2>
+      <p class="section-desc">Newest first.</p>
+      <div class="timeline" id="history-timeline"></div>
+    </section>
+
+    <section id="parts" class="section">
+      <h2 class="section-title">Parts Purchase History
+        <button class="btn btn-sm" data-action="add-part">+ Add part</button>
+      </h2>
+      <div class="parts-table-wrap">
+        <table class="parts-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Cost</th>
+              <th>Polaris P#</th>
+              <th>Vendor</th>
+              <th>Description</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="parts-tbody"></tbody>
+        </table>
+      </div>
+      <div class="parts-total" id="parts-total"></div>
+    </section>
+
+    <section id="notes" class="section">
+      <h2 class="section-title">Reference Notes
+        <button class="btn btn-sm" data-action="add-note">+ Add note</button>
+      </h2>
+      <p class="section-desc">Standing facts — tool sizes, torques, oil capacities.</p>
+      <ul class="notes-list" id="notes-list"></ul>
+    </section>
+
+    <section id="schedule" class="section">
+      <h2 class="section-title">Periodic Maintenance Schedule</h2>
+      <p class="section-desc">Tap a checkbox to mark complete — the site stamps today's date, your current hours, and your current odometer onto that item. Legend: <span class="tag severe">severe</span> = service more often in mud/water/sand. <span class="tag dealer">dealer</span> = factory recommends a Polaris dealer.</p>
+      <div id="schedule-sections"></div>
+    </section>
+
+    <section id="photos" class="section">
+      <h2 class="section-title">Photos &amp; Records
+        <button class="btn btn-sm" data-action="add-photo">+ Add photo</button>
+      </h2>
+      <p class="section-desc">Local thumbnails from <code>ATV PICS/</code> plus the full Google Photos album.</p>
+      <div class="album-cta">
+        <a class="album-button" id="album-button" href="#" target="_blank" rel="noopener">View Full Album on Google Photos &nbsp;↗</a>
+        <p class="album-meta" id="album-meta"></p>
+      </div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </section>
+
+    <section id="vehicle" class="section">
+      <h2 class="section-title">Vehicle Information</h2>
+      <div class="specs-grid" id="specs-grid"></div>
+    </section>
+
+    <section id="search" class="section">
+      <h2 class="section-title">Search
+        <button class="btn btn-sm btn-ghost" data-action="open-settings">Settings</button>
+      </h2>
+      <p class="section-desc">Ask Claude about anything in this log, the FSD, parts, or schedule. Your API key stays in this browser.</p>
+      <div class="search-row">
+        <input type="search" id="search-input" placeholder="e.g. what's the engine oil capacity? part # for the seat latch pin?">
+        <button class="btn" id="search-go">Search</button>
+      </div>
+      <div class="search-tools">
+        <label><input type="checkbox" id="search-polaris"> Search Polaris parts (web)</label>
+        <label><input type="checkbox" id="search-partzilla"> Search Partzilla catalog (web)</label>
+        <span class="search-tools-note">Web searches use Claude's web_search / web_fetch on <code>polaris.com</code> + <code>partzilla.com</code>. Each search costs ~1¢.</span>
+      </div>
+      <div class="search-hint" id="search-hint">No API key set — open Settings to paste one.</div>
+      <div id="search-result"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p id="footer-line">2007 Polaris Sportsman X2/500 EFI · Spokane, WA</p>
+    <p class="footer-vin" id="footer-vin">VIN: 4XATN50A77A969164</p>
+    <p class="footer-hits"><img src="https://visitor-badge.laobi.icu/badge?page_id=pughlabs.2007-polaris-sportsman-x2-500-efi&left_color=%234E4D4A&right_color=%2375745D&left_text=visits" alt="Hit counter"></p>
+    <a class="footer-qr" href="https://pughlabs.github.io/2006-polaris-sportsman-500/" title="Scan to open on mobile">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https%3A%2F%2Fpughlabs.github.io%2F2006-polaris-sportsman-500%2F&bgcolor=D4D1CA&color=4E4D4A" alt="QR code" width="90" height="90">
+    </a>
+  </footer>
+
+  <!-- Dirty-state action bar (hidden until edits exist) -->
+  <div class="dirty-bar hidden" id="dirty-bar">
+    <span>Unsaved edits</span>
+    <button class="btn btn-sm" data-action="download-json">Download data.json</button>
+    <button class="btn btn-sm" data-action="export-maintenance">Export MAINTENANCE.md</button>
+    <button class="btn btn-sm" data-action="export-parts">Export PARTS LIST.md</button>
+  </div>
+
+  <!-- Single shared modal -->
+  <dialog id="modal">
+    <div class="modal-header">
+      <h2 id="modal-title">Title</h2>
+      <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+    </div>
+    <form method="dialog" id="modal-form">
+      <div class="modal-body" id="modal-body"></div>
+      <div class="modal-footer" id="modal-footer">
+        <button type="button" class="btn btn-ghost" data-modal-action="cancel">Cancel</button>
+        <button type="submit" class="btn" data-modal-action="save">Save</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Lightbox for photos -->
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" id="lb-close" aria-label="Close lightbox">×</button>
+    <div id="lb-media"></div>
+    <div class="lb-caption" id="lb-caption"></div>
+  </div>
+
+  <!-- Firefox file:// fallback: same JSON inlined. Browser uses this only if fetch fails. -->
+  <script id="data-fallback" type="application/json"></script>
+
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
